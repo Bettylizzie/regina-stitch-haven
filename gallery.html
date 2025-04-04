@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Regina's Stitch Haven - Nakuru</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span class="regina">Regina's</span> <span class="stitch">Stitch</span> <span class="haven">Haven</span></h1>
+                <p>Where fashion meets perfection</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/gallery-bg.jpg');">
+        <div class="container">
+            <h1>Our Work Gallery</h1>
+            <p>See samples of our beautiful creations</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="active" data-filter="all">All Works</button>
+                <button data-filter="ladies">Ladies Fashion</button>
+                <button data-filter="gents">Gents Fashion</button>
+                <button data-filter="kids">Kids Fashion</button>
+                <button data-filter="uniforms">School Uniforms</button>
+                <button data-filter="training">Training</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <div class="container">
+            <div class="gallery-container">
+                <div class="gallery-item" data-category="ladies">
+                    <img src="images/gallery/ladies-1.jpg" alt="Ladies Dress">
+                    <div class="gallery-overlay">
+                        <h3>Evening Gown</h3>
+                        <p>Custom-made for a wedding</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ladies">
+                    <img src="images/gallery/ladies-2.jpg" alt="Ladies Outfit">
+                    <div class="gallery-overlay">
+                        <h3>Office Wear</h3>
+                        <p>Tailored skirt and blouse set</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="gents">
+                    <img src="images/gallery/gents-1.jpg" alt="Gents Suit">
+                    <div class="gallery-overlay">
+                        <h3>3-Piece Suit</h3>
+                        <p>Wedding suit with custom fit</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="gents">
+                    <img src="images/gallery/gents-2.jpg" alt="Gents Traditional">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Outfit</h3>
+                        <p>For a cultural event</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="kids">
+                    <img src="images/gallery/kids-1.jpg" alt="Kids Outfit">
+                    <div class="gallery-overlay">
+                        <h3>Children's Dress</h3>
+                        <p>Birthday party outfit</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="kids">
+                    <img src="images/gallery/kids-2.jpg" alt="Kids Traditional">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Wear</h3>
+                        <p>For a family event</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="uniforms">
+                    <img src="images/gallery/uniform-1.jpg" alt="School Uniform">
+                    <div class="gallery-overlay">
+                        <h3>School Uniform</h3>
+                        <p>Complete set with sweater</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="uniforms">
+                    <img src="images/gallery/uniform-2.jpg" alt="School Sports Kit">
+                    <div class="gallery-overlay">
+                        <h3>Sports Kit</h3>
+                        <p>For a local primary school</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/training-1.jpg" alt="Training Class">
+                    <div class="gallery-overlay">
+                        <h3>Training Session</h3>
+                        <p>Students learning pattern making</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/training-2.jpg" alt="Graduation">
+                    <div class="gallery-overlay">
+                        <h3>Graduation Day</h3>
+                        <p>Proud students with their certificates</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ladies">
+                    <img src="images/gallery/ladies-3.jpg" alt="Bridal Dress">
+                    <div class="gallery-overlay">
+                        <h3>Bridal Gown</h3>
+                        <p>Custom wedding dress</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="gents">
+                    <img src="images/gallery/gents-3.jpg" alt="Office Wear">
+                    <div class="gallery-overlay">
+                        <h3>Office Attire</h3>
+                        <p>Tailored shirt and trousers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Client Experiences</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <p>"Regina made my daughter's graduation dress and it was stunning! She captured exactly what we wanted and the fit was perfect."</p>
+                    <div class="client">
+                        <span>- Grace W., Nakuru</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"The suits Regina made for my groomsmen were impeccable. Everyone complimented us on how well-fitted they were."</p>
+                    <div class="client">
+                        <span>- David M., Nakuru</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"After Regina's training program, I started my own small tailoring business. Her teaching methods are practical and effective."</p>
+                    <div class="client">
+                        <span>- Susan K., Nakuru</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Inspired by Our Work?</h2>
+            <p>Let's create something beautiful for you or teach you how to make your own</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn">Book Appointment</a>
+                <a href="tel:+254724844711" class="btn-outline"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Regina's Stitch Haven</h3>
+                    <p>Premium tailoring services and training in Nakuru, Kenya. Creating beautiful, custom-fit clothing since 2013.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Nakuru City, Kenya</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+254724844711">0724 844 711</a></li>
+                        <li><i class="fas fa-envelope"></i> reginastitch@example.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Regina's Stitch Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
