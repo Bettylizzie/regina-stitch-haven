@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
     // Form Submission Handling
 document.addEventListener('DOMContentLoaded', function() {
     // Existing code...
