@@ -1,22 +1,29 @@
-// Mobile Menu Toggle
+// Mobile Menu Toggle (Enhanced)
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu');
     const navMenu = document.querySelector('nav ul');
     
     mobileMenuBtn.addEventListener('click', function() {
         navMenu.classList.toggle('show');
+        // Toggle icon between hamburger and X
+        if (navMenu.classList.contains('show')) {
+            this.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+            this.innerHTML = '<i class="fas fa-bars"></i>';
+        }
     });
     
-    // Close mobile menu when clicking on a link
+    // Close menu when clicking on a link
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 768) {
                 navMenu.classList.remove('show');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             }
         });
     });
-    
+});
     // Testimonial Slider
     const testimonials = document.querySelectorAll('.testimonial');
     const dots = document.querySelectorAll('.dot');
