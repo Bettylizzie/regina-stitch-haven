@@ -1,27 +1,40 @@
-// Mobile Menu Toggle (Enhanced)
+// Enhanced Mobile Menu with Dropdowns
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu');
     const navMenu = document.querySelector('nav ul');
-    
-    mobileMenuBtn.addEventListener('click', function() {
+    const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
+
+    // Mobile menu toggle
+    mobileMenuBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
         navMenu.classList.toggle('show');
-        // Toggle icon between hamburger and X
-        if (navMenu.classList.contains('show')) {
-            this.innerHTML = '<i class="fas fa-times"></i>';
-        } else {
-            this.innerHTML = '<i class="fas fa-bars"></i>';
-        }
+        this.innerHTML = navMenu.classList.contains('show') ? 
+            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
     });
-    
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+
+    // Dropdown functionality
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
-                navMenu.classList.remove('show');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                e.preventDefault();
+                const parent = this.parentElement;
+                const submenu = this.nextElementSibling;
+                
+                parent.classList.toggle('show');
+                submenu.classList.toggle('show');
             }
         });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav') && window.innerWidth <= 768) {
+            navMenu.classList.remove('show');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            document.querySelectorAll('.submenu').forEach(sub => {
+                sub.classList.remove('show');
+            });
+        }
     });
 });
     // Testimonial Slider
